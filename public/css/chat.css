@@ -1,0 +1,249 @@
+.chat-heading{
+    position: fixed;
+    color: #fff;
+    background-color:rgb(20, 20, 20);
+    top: 0;
+    z-index: 1;
+}
+
+.message-board{
+    position: relative;
+    width: 80%;
+    height: 75vh;
+    margin: 0px auto;
+}
+
+.chat-bot{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    border: 1px solid rgb(19, 18, 18);
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+    /* z-index: 1; */
+}
+
+.chat-bot form{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.chat-bot form input{
+    /* background-color: white; */
+    background-color: rgb(20, 20, 20);
+    color: white;
+    font-family: "Helvetica";
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.chat-bot form input.nickname{
+    border: 2px solid brown;
+}
+
+.chat-bot form input:focus{
+    /* background-color:white; */
+    background-color: rgb(20, 20, 20);
+    color: white;
+}
+
+.chat-bot form button{
+    font-family: "Helvetica";
+    background-color:rgb(20, 20, 20);
+    color:white;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.sender, .receiver{
+    display: flex;
+    flex-direction: row-reverse;
+    font-family: "Helvetica";
+    padding: 10px;
+}
+
+.receiver{
+    flex-direction: row;
+}
+
+.sender .chat, .receiver .chat{
+    max-width: 250px;
+    border-radius: 3px;
+    padding: 8px;
+    background-color: rgb(26, 107, 80);
+    color: white;
+}
+
+.receiver .chat{
+    background-color: rgb(29, 29, 29);
+}
+
+.sender .chat .name, .receiver .chat .name{
+    font-style: italic;
+    font-size: 10px;
+    margin-bottom: 3px;
+    color: rgb(230, 205, 172);
+}
+
+.side-bar{
+    background-color: rgb(20, 20, 20);
+    border-right: 1px solid rgb(40, 40, 40);
+}
+
+.user-list p{
+    position: relative;
+    margin-bottom: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5px;
+    text-transform: capitalize;
+}
+
+.user-list p:hover{
+    cursor: pointer;
+}
+
+.user-list p::before{
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 5px;
+    padding: 1px 1px;
+    margin-right: 5px;
+    border-radius: 50px;
+    left: -12px;
+    background-color: green;
+}
+
+#text-input{
+    position: relative;
+    width: 80%;
+    margin: 0px auto;
+    height: 15vh;
+}
+
+.effect{
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 0px 0px 7px lightblue;
+}
+
+.user-side-bar{
+    position: fixed;
+    top: 0;
+    left: -150%;
+    height: 100vh;
+    background-color: rgb(20, 20, 20);
+    font-family: "Helvetica";
+    color: white;
+    box-shadow: 0px 0px 10px rgba(48, 48, 48, 0.5);
+    z-index: 100;
+}
+
+.user-side-bar.open{
+    animation-name: open;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes open{
+    0%{left: -150%}
+    100%{left: 0}
+}
+
+.user-side-bar.close{
+    animation-name: closeBar;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes closeBar{
+    0%{left: 0}
+    100%{left: -150%}
+}
+
+.show-on-media{
+    display: none;
+}
+
+.hide-on-media{
+    display: block;
+}
+
+@media (max-width: 420px){
+    .show-on-media{
+        display: block;
+    }
+    
+    .hide-on-media{
+        display: none;
+    }
+
+    .message-board{
+        width: 90%;
+        height: 74vh;
+    }
+
+    #text-input{
+        width: 100%;
+    }
+}
+
+@media(max-width: 620px) and (min-width: 421px){
+    .show-on-media{
+        display: block;
+    }
+    
+    .hide-on-media{
+        display: none;
+    }
+
+    .message-board{
+        width: 95%;
+        height: 74vh;
+    }
+
+    #text-input{
+        width: 100%;
+    }
+}
+
+@media(max-width: 820px) and (min-width: 621px){
+    .show-on-media{
+        display: block;
+    }
+    
+    .hide-on-media{
+        display: none;
+    }
+
+    .message-board{
+        width: 95%;
+        height: 74vh;
+    }
+
+    #text-input{
+        width: 100%;
+    }
+}
+
+@media(max-width: 1120px) and (min-width: 821px){
+    .show-on-media{
+        display: block;
+    }
+    
+    .hide-on-media{
+        display: none;
+    }
+
+    .message-board{
+        width: 95%;
+        height: 74vh;
+    }
+
+    #text-input{
+        width: 100%;
+    }
+}

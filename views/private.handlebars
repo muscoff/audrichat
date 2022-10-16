@@ -1,0 +1,62 @@
+<div class="row font-helvetica" style="background-image: url('./images/bg.jpg');">
+    <div class="col-21 width-25 hide-on-media">
+        <div class="width-auto relative">
+        <div class="height-100 overflow-auto side-bar white-text">
+            <div class="padding-all-10 width-90 margin-auto">
+                <div class="font-30">Online Users</div><br>
+                <div id="user-list" class="user-list"></div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="col-101 width-75 width-lx-100 width-l-100 width-m-100 width-s-100 height-100">
+        {{!-- <div style="visibility: hidden;" class="font-30 center-text white-text padding-all-2">
+            {{title}}
+        </div> --}}
+        <div class="chat-heading width-75 width-lx-100 width-l-100 width-m-100 width-s-100 padding-all-10">
+            <div class="relative1 flex-row align-items-center justify-content-center">
+                <div class="absolute left-0 show-on-media cursor-pointer padding-all-5">
+                    <i onclick="openBar()" class="fi fi-rr-menu-burger"></i>
+                </div>
+                <div class="font-25">{{title}}</div>
+            </div>
+        </div>
+
+        <div id="break"></div>
+
+        <div class="message-board"></div>
+
+        <div id="text-input" class="">
+            <div class="chat-bot">
+                <form>
+                    <div class="width-100 relative row align-items-center">
+                        <div class="absolute1 right-01 white-text right-text width-100 font-12"><i><div id="typing"></div></i></div>
+                        <div class="width-100 effect">
+                            <input type="hidden" id="sender" />
+                            <input type="hidden" id="receiver" />
+                            <input type="hidden" id="nickname" />
+                            <div class="width-100"><input type="text" id="message" /></div>
+                        </div>
+                    </div>
+                    <div><button><i class="fi fi-rr-paper-plane"></i></button></div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="user-side-bar width-lx-35 width-l-40 width-m-60 width-s-70 show-on-media">
+    <div class="height-10 flex-row-reverse align-items-center" style="border-bottom: 1px solid rgb(80,80,80)">
+        <div class="padding-all-5 cursor-pointer"><i onclick="openBar()" class="fi fi-rr-cross"></i></div>
+    </div>
+
+    <div class="width-90 height-90 overflow-auto margin-auto padding-all-10">
+        <div class="font-25">Online Users</div><br />
+        <div id="side-user-list" class="user-list"></div>
+    </div>
+</div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="./script/private_chat.js"></script>

@@ -1,0 +1,24 @@
+<div style="background-image: url('./images/bg.jpg')">
+
+    <h1 class="font-50 font-lx-30 font-l-30 font-m-25 font-s-25 font-helvetica center-text title white-text">{{title}}</h1>
+
+    <div class="messages overflow-auto"></div>
+
+    <div class="chat-bot" style="background-color: rgb(20,20,20);">
+        <form>
+            <div class="width-100 relative row align-items-center">
+                <div class="absolute1 right-01 width-100 right-text white-text font-12"><i><div id="typing"></div></i></div>
+                <div class="flex-row">
+                    <div class="width-10 width-lx-20 width-l-30 width-m-30 width-s-30"><input type="text" class="nickname" placeholder="Nickname" /></div>
+                    <div class="width-100"><input type="text" id="message" /></div>
+                </div>
+            </div>
+            <div><button><i class="fi fi-rr-paper-plane"></i></button></div>
+        </form>
+    </div>
+
+</div>
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="./script/chat.js"></script>
